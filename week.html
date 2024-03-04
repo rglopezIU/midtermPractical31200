@@ -1,0 +1,252 @@
+<!-- CIT 215 Menu -->
+<!-- By: Ruben Lopez -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="icon" type="x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet/less" type="text/css" href="./less/style.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+<body>
+    <div>
+        <!-- opening icon -->
+        <a class="hamburger" href="#navbar">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <!-- nav bar for page -->
+        <nav id="navbar">
+            <ul>
+
+                <li><a href="https://twitter.com">
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </a>
+                </li>
+
+                <li><a href="index.html">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        Home
+                    </a></li>
+
+                <li><a href="https://rglopeziu.github.io/clientCheckInWeek4/">Bulletin</a></li>
+
+                <li><a href="week.html">Week</a></li>
+
+            </ul>
+
+            <!-- closing icon -->
+            <a class="close" href="#">
+                <i class="fa-solid fa-x"></i>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Begin Practicum portion -->
+    <!-- recipe 1 -->
+    <div id="recipe1">
+        <h2>Recipe 1: Dynamically changing web content</h3>
+
+        <div class="ingredients-box">
+            <h4>Ingredients</h4>
+            <ul>
+                <li>The DOM createElement method</li>
+                <li>The DOM append method</li>
+                <li>Template literals</li>
+                <li>The innerText method</li>
+                <li>The innerHTML method</li>
+            </ul>
+        </div>
+        <div class="demoCSS1"></div>
+    
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <h4>Step 1: Create a web document and fill with basic
+                tags
+            </h4>
+            <h4>
+                Step 2: To the body of the document, add a div
+                element of class demo, where demo is as shown. (above next to ingredients)
+            </h4>
+            <h4>
+                Step 4: Now use the DOM method, querySelector
+                to get a reference to the div of class demo.
+            </h4>
+            <h4>
+                Step 5: Use textContent method to add plain text
+            </h4>
+            <p>
+                Let demoRef = document.querySelector(".demo");
+                <br>
+                demoRef.textContent = "Recipe 1, Simple Display";
+            </p>
+            <h4>
+                You should see the text content when you render the document
+                in the browser
+            </h4>
+            <h4>
+                Step 6: Add some HTML code. Use innerHTML method. 
+                <br>
+                Now see how to render content that includes HTML tags.
+                <img src="/images/demoCSS3.png" alt="innerHTML example" style="width: 700px; height: 40px;">
+                <br>
+                Modify the style for demo class to have a width/height of 300px.
+                <div class="demoCSS2"></div>
+            </h4>
+            <h4>
+                When this is rendered you should see
+                <img src="/images/demoCSS4.png" alt="innerHTML example" style="width: 200px; height: 200px;">
+            </h4>
+            <h4>
+                What do you think will happen if you do this
+            </h4>
+            <p>
+                demoRef.textContent = &lt;h3&gt;Recipe1, Simple Display&lt;/h3&gt;&lt;p&gt;
+                This is an important skill!&lt;/p&gt;;
+            </p>
+
+            <h4>
+                Try it! You will notice that all the tags are ignored and treated as
+                plain text.
+            </h4>
+            <h4>Step 7: Use the DOM createElement method, with append</h4>
+            <div class="demoCSS5"></div>
+            <h4> Now you should see this, below</h4>
+            <img src="/images/demoCSS6.png" alt="innerHTML example" style="width: 200px; height: 150px;">
+        </div>
+
+    </div>
+
+    <!-- Recipe 2 -->
+    <div id="recipe2">
+        <h2>Recipe 2: Displaying JSON Data</h2>
+
+        <div class="ingredients-box">
+            <h4>Ingredients</h4>
+            <ul>
+                <li>The DOM createElement method</li>
+                <li>The DOM append method</li>
+                <li>Array of objects</li>
+                <li>Choice of images</li>
+            </ul>
+        </div>
+        <div class="recipe2_description">
+            <h3>JSON stands for JavaScript Object
+            Notation, and it comes close to an array
+            of objects, like this array of animals
+            below. Note, it is important to make
+            sure that objects have common
+            attributes, if these attributes are being
+            used to display information.
+            </h3>
+        </div>
+
+        <div class="instructions">
+            <h4>Lets start off with the below array</h4>
+            <p>const petsData = [
+            <br>{
+            petName: "Stella",
+            age: 7,
+            weightInKilos: 24,
+            breed: "Dalmation",
+            pic:
+            "images\\stella.png"
+            },
+            <br>{
+            petName: "Cody",
+            age: 8,
+            weightInKilos: 22,
+            breed: "Corgi",
+            pic:
+            "images\\cody.png"
+            },
+            <br>{
+            petName: "Mango",
+            age: 2,
+            weightInKilos: 11,
+            breed: "Persian",
+            pic:
+            "images\\mango.png"
+            },
+            <br>{
+            petName: "Lucy",
+            age: 4,
+            weightInKilos: 35,
+            breed: "Ball Python",
+            pic:
+            "images\\lucy.png"
+            },
+            <br>{
+            petName: "Buhmie",
+            age: 1,
+            weightInKilos: 28,
+            breed: "Bull-dog",
+            pic:
+            "images\\buhmie.png"
+            }
+            ];</p>
+
+            <h4>Make sure that the images are referenced
+            correctly, then you can use the techniques in
+            Recipe 1, to display the animals on a web
+            page. You can use a simple for or while, or
+            array method forEach.
+            </h4>
+            <div class="recipe2_image1"></div>
+            <h4>
+                You should see (of course, depending on the
+                images), <div class="recipe2_image2"></div>
+            </h4>
+        </div>
+
+    </div>
+
+    <!-- Recipe 3 -->
+    <div id="recipe3">
+        <h2>Recipe 3: Finding JSON Data</h2>
+        <div class="ingredients-box">
+            <h4>Ingredients</h4>
+            <ul>
+                <li>The Array forEach method</li>
+                <li>A source array of objects</li>
+                <li>An empty array of objects</li>
+                <li>The array method, push</li>
+            </ul>
+            <!-- to make spacing work -->
+            <br><br><br><br>
+        </div>
+        <div class="recipe3_description">
+            <h3>Using the same array of objects, use
+            either find (returns the first element) or
+            a combination of some type of iteration
+            and find. You can substitute your own
+            logic instead of find, if you iterate
+            through the array adding each found
+            item to another array.
+            Suppose we wanted to find all dogs
+            with age greater than 2…
+            This is the desired result:
+            </h3>
+        </div><br><br>
+        <div class="recipe3_image1"></div>
+        <h4>Try this code: </h4>
+        <p>
+            let soughtAnimals = [];
+            petsData.forEach((animal) => {
+              if (animal.age >= 2)
+                soughtAnimals.push(animal);
+            });
+        </p>
+
+    </div>
+
+</body>
+</html>
